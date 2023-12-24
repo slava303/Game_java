@@ -4,7 +4,12 @@ public class Sniper extends Hero {
      
     public Sniper(String name){
         super(name, 100, 100, 0, 0,
-         30, new int[]{12,15}, 3, true);
+         15, new int[]{12,17}, 3, true);
+    }
+
+    public void Attac(Hero hero){
+        hero.currentHelth  = hero.currentHelth  - (damage[0]  -( hero.armor / 100));
+        
     }
     
 

@@ -37,6 +37,26 @@ public abstract class Hero {
 
     }
 
+
+    public void Attac(Hero hero){
+        hero.currentHelth  = hero.currentHelth  - (damage[0]  -( hero.armor / 100));
+        
+    }
+
+    public void heal(Hero hero)
+    {
+        hero.currentHelth += healthReagen;
+    }
+
+    public void critacal_damage(Hero hero)
+    {
+        hero.currentHelth  = hero.currentHelth  - (damage[1]  -( hero.armor / 100));
+    }
+
+
+
+    
+
    
 
 

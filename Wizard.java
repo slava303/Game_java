@@ -3,9 +3,13 @@ package sem1;
 public class Wizard  extends Hero{
 
      public Wizard(String name){
-        super(name, 100, 100, 0, 0,
-         30, new int[]{12,15}, 3, true);
+        super(name, 50, 50, 10, 0,
+         10, new int[]{12,15}, 3, true);
     }
+
+   
+
+   
 
     @Override
     public String toString() {

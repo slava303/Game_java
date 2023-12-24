@@ -4,17 +4,38 @@ import java.util.*;
 public class Main {
     
     public static void main(String[] args) {
-        List<Hero> gameHeroeList = new ArrayList<>();
+      
+        List<Hero> whiteteam = FillArray();
+        List<Hero> blackteam = FillArray();
+
+        System.out.println("team white\n");
+        for (Hero hero : whiteteam) {
+            System.out.println(hero.toString());
+        }
+        System.out.println("\n");
+        System.out.println("team black\n");
+        for (Hero hero : blackteam) {
+            System.out.println(hero.toString());
+        }
+
+       
+
+        
+     
+    }
+
+    static  List<Hero> FillArray()
+    {   List<Hero> gameHeroeList = new ArrayList<>();
         Random rand  = new Random();
-        Hero archer = new Archer("arch");
-        Hero monk = new Monk("monk");
-        Hero rober = new Rober("rober");
-        Hero sniper = new Sniper("sniper");
-        Hero sorcerer = new Sorcerer("sorcerer");
-        Hero wizard = new Wizard("Wizard");
-        Hero villager = new Villager("villager");
-
-
+        Hero archer = new Archer(Names.values()[new Random().nextInt(0,Names.values().length-1)].toString());
+        Hero monk = new Monk(Names.values()[new Random().nextInt(0,Names.values().length-1)].toString());
+        Hero rober = new Rober(Names.values()[new Random().nextInt(0,Names.values().length-1)].toString());
+        Hero sniper = new Sniper(Names.values()[new Random().nextInt(0,Names.values().length-1)].toString());
+        Hero sorcerer = new Sorcerer(Names.values()[new Random().nextInt(0,Names.values().length-1)].toString());
+        Hero wizard = new Wizard(Names.values()[new Random().nextInt(0,Names.values().length-1)].toString());
+        Hero villager = new Villager(Names.values()[new Random().nextInt(0,Names.values().length-1)].toString());
+        
+      
         for (int i = 0; i < 10; i++) {
             
             int number = rand.nextInt(0,7);
@@ -46,15 +67,10 @@ public class Main {
                     break;
             }
 
-        }
-
-
-
-        for (Hero hero : gameHeroeList) {
-            System.out.println(hero.toString());
-        }
-
-        
-     
     }
+
+    return gameHeroeList;
+
+   }
+
 }
