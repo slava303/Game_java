@@ -1,7 +1,7 @@
 package sem1;
 
-public class Sorcerer extends Hero{
-    public Sorcerer(String name){
+public class Spearman  extends Hero{
+    public Spearman(String name){
         this.name = name;
         this.isMove = true;
         this.maxHhealth = 50;
@@ -14,6 +14,6 @@ public class Sorcerer extends Hero{
     @Override
     public String toString() {
         // TODO Auto-generated method stub
-        return "Sorcerer "+"("+name+")";
+        return "Spearman "+"("+name+")";
     }
 }

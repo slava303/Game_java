@@ -2,17 +2,21 @@ package sem1;
 
 public abstract class Hero {
     
-    protected String name;
+   protected String name;
 
-   protected int maxHhealth;
+   protected short maxHhealth;
 
-   protected int currentHelth;
+   protected short currentHelth;
 
-   protected int manaRegen;
+   protected short manaRegen;
 
-   protected int healthReagen;
+   protected short healthReagen;
+
+   protected short armor;
 
    protected int[] damage;
+
+   protected  int moveSteps;
 
    boolean isMove;
    
