@@ -3,14 +3,10 @@ package sem1;
 public class Sniper extends Hero {
      
     public Sniper(String name){
-        this.name = name;
-        this.isMove = true;
-        this.maxHhealth = 120;
-        this.currentHelth = maxHhealth;
-        this.damage = new int[]{12,15};
-        this.healthReagen = 0;
-        
+        super(name, 100, 100, 0, 0,
+         30, new int[]{12,15}, 3, true);
     }
+    
 
     @Override
     public String toString() {

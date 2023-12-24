@@ -5,14 +5,9 @@ public class Archer extends Hero {
     int countArrows = 10;
 
     public Archer(String name){
-        this.name = name;
-        this.isMelee=false;
-        this.isMilitary = false;
-        this.isMove = true;
-        this.maxHhealth = 100;
-        this.currentHelth = maxHhealth;
-        this.healthReagen = 5;
-        this.damage = new int[]{10,13};
+
+        super( name,100, 100, 0, 0,
+         30, new int[]{12,15}, 3, true);
     }
 
     @Override

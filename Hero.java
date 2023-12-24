@@ -1,18 +1,19 @@
 package sem1;
 
 public abstract class Hero {
-    
-   protected String name;
 
-   protected short maxHhealth;
+    protected String name;
 
-   protected short currentHelth;
 
-   protected short manaRegen;
+   protected int maxHhealth;
 
-   protected short healthReagen;
+   protected int currentHelth;
 
-   protected short armor;
+   protected int manaRegen;
+
+   protected int healthReagen;
+
+   protected int armor;
 
    protected int[] damage;
 
@@ -20,9 +21,21 @@ public abstract class Hero {
 
    boolean isMove;
    
-    boolean isMelee;
+  
 
-    boolean isMilitary;
+    public Hero(String name,int maxHhealth,int currentHelth, int manaRegen,int healthReagen,int armor,int[] damage,int moveSteps,
+     boolean isMove){
+        this.name = name;
+        this.maxHhealth = maxHhealth;
+        this.currentHelth = currentHelth;
+        this.manaRegen = manaRegen;
+        this.armor = armor;
+        this.damage = damage;
+        this.moveSteps = moveSteps;
+        this.isMove = isMove;
+
+
+    }
 
    
 
