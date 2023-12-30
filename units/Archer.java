@@ -28,12 +28,12 @@ public class Archer extends Hero {
             
               allDamage = damage[1] ; /// 30 ; // 42  - максимальное расстояние на карте
                dm = allDamage ;
-            hero.currentHelth -= dm - (hero.armor * 0.005); 
+            hero.currentHelth -= (dm - (hero.armor * 0.5)); 
            }
          else{
             allDamage = damage[0]; /// 30 ; // 42  - максимальное расстояние на карте
                dm = allDamage ;
-            hero.currentHelth -=  dm - (hero.armor * 0.005); 
+            hero.currentHelth -= ( dm - (hero.armor * 0.5)); 
 
              }
          this.countArrows --;
@@ -52,21 +52,21 @@ public class Archer extends Hero {
      public void whoNext(List <Hero> lst)
     {   
        double distance_min = this.getDistance(lst.get(0));
-       Hero next = lst.get(0);
-       for (Hero hero : lst) {
+       Hero hero = lst.get(0);
+       for (Hero next : lst) {
 
-            if ( distance_min > this.getDistance(hero)) {
+            if ( distance_min > this.getDistance(next)) {
                 
-                distance_min = this.getDistance(hero);
-                next = hero;
+                distance_min = this.getDistance(next);
+                hero = next;
             }
 
        }
 
-       double damage = this.attac(next);
-       System.out.println("Лучник исходя из здравго смысла атакует "+next+" растояние между ними равно "+this.getDistance(next));
+       double damage = this.attac(hero);
+       System.out.println("Лучник исходя из здравго смысла атакует "+hero+" растояние между ними равно "+this.getDistance(hero));
        System.err.println();
-        System.out.println(" И наносит урон "+damage+" Текущие здоровье "+next+" = "+ next.currentHelth);
+        System.out.println(" И наносит урон "+damage+" Текущие здоровье "+hero+" = "+ hero.currentHelth);
         System.err.println();
 
     }
