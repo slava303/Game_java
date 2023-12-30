@@ -1,4 +1,4 @@
-package units;
+package sem1.units;
 
 public class Coords {
     public static int max_x = 30;

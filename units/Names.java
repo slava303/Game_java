@@ -1,4 +1,4 @@
-package units;
+package sem1.units;
 
 public enum Names {
     Ivan,Olga,Slava,

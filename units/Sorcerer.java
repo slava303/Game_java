@@ -1,4 +1,4 @@
-package units;
+package sem1.units;
 
 public class Sorcerer extends Hero{
 

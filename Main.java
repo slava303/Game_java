@@ -1,16 +1,16 @@
 package sem1;
 import java.util.*;
 
-import units.Archer;
-import units.Coords;
-import units.Hero;
-import units.Monk;
-import units.Names;
-import units.Rober;
-import units.Sniper;
-import units.Sorcerer;
-import units.Villager;
-import units.Wizard;
+import sem1.units.Archer;
+import sem1.units.Coords;
+import sem1.units.Hero;
+import sem1.units.Monk;
+import sem1.units.Names;
+import sem1.units.Rober;
+import sem1.units.Sniper;
+import sem1.units.Sorcerer;
+import sem1.units.Villager;
+import sem1.units.Wizard;
 
 public class Main {
     
