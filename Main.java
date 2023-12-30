@@ -34,11 +34,16 @@ public class Main {
         System.out.println();
         coords(blackteam);
         System.out.println();
-        infoDistanse(whiteteam, blackteam);
+        infoDistanse(whiteteam.get(0), blackteam);
         System.out.println();
-        System.out.println(whiteteam.get(whiteteam.size()-1).getDistance(blackteam.get(0)));
+        System.out.println(whiteteam.get(whiteteam.size()-1).getDistance(blackteam.get(5)));
 
-       
+        Archer arch = new Archer("test_name");
+        arch.x = 7;
+        arch.y = 4;
+            arch.whoNext(whiteteam);
+        
+      
 
        
 
@@ -112,11 +117,11 @@ public class Main {
    }
 
    
-   static void infoDistanse(List<Hero> whiteteam,List<Hero> blackteam)
+   static void infoDistanse(Hero whiteteam,List<Hero> blackteam)
    {
-    for (int i = 0; i <whiteteam.size(); i++) {
+    for (int i = 0; i <blackteam.size(); i++) {
 
-            System.out.println("рaстояние от "+whiteteam.get(i)+" до "+blackteam.get(i)+" = "+whiteteam.get(i).getDistance(blackteam.get(i)));
+            System.out.println("рaстояние от "+whiteteam+" до "+blackteam.get(i)+" = "+whiteteam.getDistance(blackteam.get(i)));
        }
    }
 
