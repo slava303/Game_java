@@ -26,12 +26,12 @@ public class Archer extends Hero {
         if(this.countArrows > 0){
             if (critDamage) {
             
-              allDamage = damage[1] ; /// 30 ; // 42  - максимальное расстояние на карте
+              allDamage = damage[1] - (this.getDistance(hero) * 0.5); /// 30 ; // 42  - максимальное расстояние на карте
                dm = allDamage ;
             hero.currentHelth -= (dm - (hero.armor * 0.5)); 
            }
          else{
-            allDamage = damage[0]; /// 30 ; // 42  - максимальное расстояние на карте
+            allDamage = damage[0] -  (this.getDistance(hero) * 0.5); /// 30 ; // 42  - максимальное расстояние на карте
                dm = allDamage ;
             hero.currentHelth -= ( dm - (hero.armor * 0.5)); 
 
