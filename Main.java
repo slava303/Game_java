@@ -27,7 +27,18 @@ public class Main {
         System.out.println("team black\n");
         for (Hero hero : blackteam) {
             System.out.println(hero.toString());
+
         }
+
+        coords(whiteteam);
+        System.out.println();
+        coords(blackteam);
+        System.out.println();
+        infoDistanse(whiteteam, blackteam);
+        System.out.println();
+        System.out.println(whiteteam.get(whiteteam.size()-1).getDistance(blackteam.get(0)));
+
+       
 
        
 
@@ -98,6 +109,23 @@ public class Main {
             }
         }
         return team;
+   }
+
+   
+   static void infoDistanse(List<Hero> whiteteam,List<Hero> blackteam)
+   {
+    for (int i = 0; i <whiteteam.size(); i++) {
+
+            System.out.println("рaстояние от "+whiteteam.get(i)+" до "+blackteam.get(i)+" = "+whiteteam.get(i).getDistance(blackteam.get(i)));
+       }
+   }
+
+   static void coords(List<Hero> whiteteam)
+   {
+    for (int i = 0; i <whiteteam.size(); i++) {
+
+            System.out.println("позиция "+whiteteam.get(i)+" ( "+whiteteam.get(i).x+","+whiteteam.get(i).y+")");
+       }
    }
 
 }
